@@ -1,0 +1,47 @@
+{
+  "version": "2026-10-30",
+  "cached_on": "2026-10-30",
+  "currency": "USD",
+  "unit": "per million tokens",
+  "official_url": "https://platform.claude.com/docs/en/about-claude/pricing",
+  "warning": "A local copy. Prices change. Check the official page before relying on any figure.",
+  "provenance": [
+    "Input and output for claude-opus-5-5, claude-sonnet-5-5 and claude-haiku-5-5: model comments in the README of Anthropic's bundled Claude API reference, as cached locally on 2026-10-30.",
+    "Input and output for claude-fable-5-1 and claude-opus-5: the model notes in the same reference.",
+    "Cache rates, the Haiku long-context tier, and the batch, fast and US-inference multipliers: the official pricing page, fetched 2026-10-30. The README gives cache rates only as approximately 1.25x and 0.1x, which would overstate reads on the models priced at 0.05x and 0.025x.",
+    "Known disagreement: the reference's model notes give claude-sonnet-5-5 cache reads as 0.20. The official page gives 0.10 (0.05x), and this table follows the official page."
+  ],
+  "modifiers": {
+    "batch": "0.5",
+    "inference_geo_us": "1.1"
+  },
+  "models": {
+    "claude-opus-5-5": {
+      "input": "4", "output": "20",
+      "cache_write_5m": "5", "cache_write_1h": "8", "cache_read": "0.20",
+      "fast_multiplier": "2"
+    },
+    "claude-sonnet-5-5": {
+      "input": "2", "output": "10",
+      "cache_write_5m": "2.50", "cache_write_1h": "4", "cache_read": "0.10"
+    },
+    "claude-haiku-5-5": {
+      "input": "0.10", "output": "0.50",
+      "cache_write_5m": "0.125", "cache_write_1h": "0.20", "cache_read": "0.01",
+      "long_context": {
+        "above_prompt_tokens": 100000,
+        "input": "0.50", "output": "2.50",
+        "cache_write_5m": "0.625", "cache_write_1h": "1", "cache_read": "0.05"
+      }
+    },
+    "claude-fable-5-1": {
+      "input": "10", "output": "50",
+      "cache_write_5m": "12.50", "cache_write_1h": "20", "cache_read": "0.25"
+    },
+    "claude-opus-5": {
+      "input": "5", "output": "25",
+      "cache_write_5m": "6.25", "cache_write_1h": "10", "cache_read": "0.50",
+      "fast_multiplier": "2"
+    }
+  }
+}
